@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c6cf08b603bde35ff05fe30d7a5d0675",
+    "revision": "e351d6d4028849d0670954097aa43a7f",
     "url": "/iTunes-API/index.html"
   },
   {
