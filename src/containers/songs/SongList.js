@@ -68,9 +68,9 @@ class SongList extends React.Component{
             <>
                 <h4 style={{textAlign:'center'}}>Showing results for: {this.props.searchQuery}</h4>
                 {this.renderResultNumber()}
-                <Grid>
-                    {this.renderSongs()}
-                </Grid>
+                    <Grid>
+                        {this.renderSongs()}
+                    </Grid>
             </>
         )
     }
