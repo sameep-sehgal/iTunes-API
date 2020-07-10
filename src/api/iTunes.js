@@ -2,7 +2,7 @@ import { create } from 'apisauce'
 
 
 const api = create({
-    baseURL:'https://itunes.apple.com/',
+    baseURL:'https://cors-anywhere.herokuapp.com/https://itunes.apple.com/',
 })
 
 

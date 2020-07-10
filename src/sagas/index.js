@@ -9,8 +9,11 @@ export function* watchFetchData() {
 
 
 export default function* fetchSongs(action){
-    console.log(action);
+
+  try{
     const fetchedSongs = yield call(fetchData,action.payload)
-    console.log(fetchedSongs.data);
     yield put({ type: Types.FETCH_SONGS, payload:fetchedSongs.data });
+  }catch(e){
+    yield put({ type: Types.FETCH_FAILURE})
+  }
 }

@@ -41,7 +41,8 @@ const mapDispatchToProps = (dispatch) => {
     return {
         onSearch: (searchQuery,history) => {
             dispatch({type:Types.FETCH_REQUESTED,payload:searchQuery});
-            history.push('/search');
+            if(history.location.pathname!=='/search')
+                history.push('/search');
         }
     }
 }

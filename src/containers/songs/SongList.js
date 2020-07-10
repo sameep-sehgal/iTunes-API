@@ -24,36 +24,42 @@ class SongList extends React.Component{
                         trackViewUrl={song.trackViewUrl}
                         artistName={song.artistName}
                         trackId={song.trackId}
+                        key={song.trackId}
                     />
         })
     }
 
     renderSongs = () => {
-        if(this.props.songs.results===undefined && this.props.songs.error===undefined){
-            return(
-                <Wrapper>
-                    <Spin size="large" />
-                </Wrapper>
-            )
-        }
-        if(this.props.songs.results!==undefined){
-            if(this.props.songs.results.length>0){
-                return this.renderSongList()
-            }else if(this.props.songs.results.length === 0){
-                return <h3 style={{textAlign:'center'}}><strong>No Results</strong></h3>
+        if(this.props.songs!==null){
+            if(this.props.songs.results===undefined && this.props.songs.error===undefined){
+                return(
+                    <Wrapper>
+                        <Spin size="large" />
+                    </Wrapper>
+                )
             }
-        }
-        if(this.props.songs.error){
-            return <h3 style={{textAlign:'center'}}><strong>{this.props.songs.error}</strong></h3>
+            if(this.props.songs.results!==undefined){
+                if(this.props.songs.results.length>0){
+                    return this.renderSongList()
+                }else if(this.props.songs.results.length === 0){
+                    return <h3 style={{textAlign:'center'}}><strong>No Results</strong></h3>
+                }
+            }
+            if(this.props.songs.error){
+                return <h3 style={{textAlign:'center'}}><strong>{this.props.songs.error}</strong></h3>
+            }else{
+                return
+            }
         }else{
-            return
+            return <h3 style={{textAlign:'center'}}><strong>Cannot fetch Results.</strong></h3>
         }
     }
 
 
     renderResultNumber = () => {
-        if(this.props.songs.resultCount)
-            return <h4 style={{textAlign:'center'}}>Showing {this.props.songs.resultCount} results.</h4>;
+        if(this.props.songs!==null)
+            if(this.props.songs.resultCount)
+                return <h4 style={{textAlign:'center'}}>Showing {this.props.songs.resultCount} results.</h4>;
     }
 
 
