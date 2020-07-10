@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e351d6d4028849d0670954097aa43a7f",
+    "revision": "743ccb7927af0c562645497c7fba19fb",
     "url": "/iTunes-API/index.html"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/iTunes-API/static/js/2.acdc6fb7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "03ade2a68bd595872271",
-    "url": "/iTunes-API/static/js/main.f363fdbc.chunk.js"
+    "revision": "981973953f075db73eb5",
+    "url": "/iTunes-API/static/js/main.687c19a4.chunk.js"
   },
   {
     "revision": "3952c86beb6684737413",
